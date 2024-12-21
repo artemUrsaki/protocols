@@ -33,3 +33,18 @@ a,
     padding: 0 2rem;
   }
 }
+
+h1 {
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 1.4em;
+}
+
+.button {
+  font-weight: bold;
+}
+
+.prop {
+  font-size: 14px;
+  line-height: 1.4em;
+}

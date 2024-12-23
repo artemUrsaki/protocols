@@ -562,7 +562,6 @@ body {
   transition:
       color 0.5s,
       background-color 0.5s;
-  font-family: 'Roboto', sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -630,11 +629,6 @@ h1 {
 
 .uppercase {
   text-transform: uppercase;
-}
-
-.text-accent-purple {
-  --tw-text-opacity: 1;
-  color: rgb(94 0 255 / var(--tw-text-opacity, 1));
 }
 
 #app {

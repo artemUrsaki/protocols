@@ -28,5 +28,5 @@ export default defineComponent({
     </li>
   </ul>
 
-  <BurgerMenu />
+  <BurgerMenu :navItems="navItems" />
 </template>

@@ -1,16 +1,22 @@
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, type PropType } from 'vue'
+
+export interface NavItem {
+  name: string
+  href: string
+}
 
 export default defineComponent({
   name: 'BurgerMenu',
+  props: {
+    navItems: {
+      type: Array as PropType<NavItem[]>,
+      required: true,
+    },
+  },
   data() {
     return {
       isOpen: false,
-      navItems: [
-        { name: 'Http', href: '#' },
-        { name: 'Mqtt', href: '#' },
-        { name: 'Compare', href: '#' },
-      ],
     }
   },
   methods: {

@@ -31,14 +31,22 @@
   h1 {
     font-weight: bold;
     font-size: 3rem;
-    line-height: 1.4em;
+    line-height: 1;
   }
-}
 
-#app {
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+  @media (min-width: 640px) {
+    h1 {
+      font-size: 6rem;
+    }
+
+    body {
+      font-size: 18px;
+    }
+  }
+
+  section {
+    padding: 200px 2rem;
+  }
 }
 
 a.router-link-exact-active {

@@ -1,39 +1,42 @@
 <script lang="ts">
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'Navigation',
+  data() {
+    return {
+      navItems: [
+        { name: 'Http', href: '#' },
+        { name: 'Mqtt', href: '#' },
+        { name: 'Compare', href: '#' },
+      ],
+    }
+  },
 })
 </script>
 
 <template>
-  <div class="container">
-    <RouterLink class="home" to="/">Home</RouterLink>
-    <ul class="nav">
-      <li><a href="">Http</a></li>
-      <li><a href="">Mqtt</a></li>
-      <li><a href="">Compare</a></li>
-    </ul>
-  </div>
+  <RouterLink to="/">Home</RouterLink>
+
+  <ul class="hidden sm:flex">
+    <li v-for="item in navItems" :key="item.name">
+      <a :href="item.href">{{ item.name }}</a>
+    </li>
+  </ul>
+
+  <button>
+    <FontAwesomeIcon icon="bars" class="" />
+  </button>
 </template>
 
 <style>
-.container {
-  max-width: 1280px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-}
-
-.container a {
+a,
+button {
   display: flex;
   align-items: center;
   height: 100px;
   padding: 0 1rem;
   text-transform: uppercase;
-}
-
-.nav {
-  display: flex;
 }
 </style>

@@ -11,7 +11,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <header>
+  <header class="flex justify-between px-4">
     <Navigation />
   </header>
 

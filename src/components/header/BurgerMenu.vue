@@ -1,5 +1,7 @@
 <script lang="ts">
 import { defineComponent, type PropType } from 'vue'
+import OpenMenu from '@/components/icons/OpenMenu.vue'
+import CloseMenu from '@/components/icons/CloseMenu.vue'
 
 export interface NavItem {
   name: string
@@ -8,6 +10,10 @@ export interface NavItem {
 
 export default defineComponent({
   name: 'BurgerMenu',
+  components: {
+    OpenMenu,
+    CloseMenu,
+  },
   props: {
     navItems: {
       type: Array as PropType<NavItem[]>,
@@ -29,7 +35,8 @@ export default defineComponent({
 
 <template>
   <button @click="switchNav" class="block sm:hidden px-4">
-    <FontAwesomeIcon :icon="isOpen ? 'xmark' : 'bars'" />
+    <OpenMenu v-show="!isOpen" />
+    <CloseMenu v-show="isOpen" />
   </button>
 
   <div

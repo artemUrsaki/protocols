@@ -45,6 +45,11 @@
     padding: 200px 3rem;
   }
 
+  svg {
+    fill: white;
+    width: 1rem;
+  }
+
   @media (min-width: 640px) {
     h1 {
       font-size: 6rem;

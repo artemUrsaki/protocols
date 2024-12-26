@@ -6,6 +6,7 @@
   body {
     min-height: 100vh;
     padding-top: 100px;
+    line-height: 2rem;
     color: #fff;
     background: #000c1a;
     transition:

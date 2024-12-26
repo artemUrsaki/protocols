@@ -20,7 +20,7 @@ export default defineComponent({
         performance, security, and flexibility.
       </p>
       <a
-        class="text-sm sm:text-base mt-4 py-2.5 px-4 max-w-fit bg-accent-blue rounded-lg font-semibold hover:scale-105 active:bg-lightest-blue"
+        class="text-sm sm:text-base mt-4 py-2.5 px-4 max-w-fit bg-accent-blue rounded-lg font-semibold hover:scale-105 hover:text-white active:bg-lightest-blue"
         href="#"
         >Read more</a
       >

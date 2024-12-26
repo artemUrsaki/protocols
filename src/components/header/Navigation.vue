@@ -1,20 +1,13 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import BurgerMenu from '@/components/header/BurgerMenu.vue'
+import NavItems from './NavItems.vue'
 
 export default defineComponent({
   name: 'Navigation',
   components: {
     BurgerMenu,
-  },
-  data() {
-    return {
-      navItems: [
-        { name: 'Http', href: '#' },
-        { name: 'Mqtt', href: '#' },
-        { name: 'Compare', href: '#' },
-      ],
-    }
+    NavItems,
   },
 })
 </script>
@@ -24,11 +17,19 @@ export default defineComponent({
     <RouterLink class="flex h-[100px] items-center px-4 uppercase" to="/">Home</RouterLink>
 
     <ul class="hidden sm:flex">
-      <li v-for="item in navItems" :key="item.name">
-        <a class="flex h-[100px] items-center px-4 uppercase" :href="item.href">{{ item.name }}</a>
-      </li>
+      <NavItems />
     </ul>
 
-    <BurgerMenu :navItems="navItems" />
+    <BurgerMenu />
   </header>
 </template>
+
+<style>
+header a {
+  display: flex;
+  height: 100px;
+  align-items: center;
+  padding: 0 1rem;
+  text-transform: uppercase;
+}
+</style>

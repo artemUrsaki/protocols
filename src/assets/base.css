@@ -8,7 +8,7 @@
     padding-top: 100px;
     line-height: 2rem;
     color: #fff;
-    background: #000c1a;
+    background: #003671;
     transition:
       color 0.5s,
       background-color 0.5s;
@@ -24,7 +24,7 @@
   }
 
   @media (hover: hover) {
-    header a:hover {
+    a:hover {
       color: #0077ff;
     }
   }

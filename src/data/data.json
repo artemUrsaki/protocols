@@ -1,4 +1,18 @@
 {
+  "nav": [
+    {
+      "name": "Http",
+      "href": "#"
+    },
+    {
+      "name": "Mqtt",
+      "href": "#"
+    },
+    {
+      "name": "Compare",
+      "href": "#"
+    }
+  ],
   "tags": {
     "http": ["Stateless", "Request/Response", "Human-Readable"],
     "mqtt": ["Stateful", "Publish/Subscribe", "Lightweight", "Reliable"]

@@ -2,23 +2,14 @@
 import { defineComponent, type PropType } from 'vue'
 import OpenMenu from '@/components/icons/OpenMenu.vue'
 import CloseMenu from '@/components/icons/CloseMenu.vue'
-
-export interface NavItem {
-  name: string
-  href: string
-}
+import NavItems from './NavItems.vue'
 
 export default defineComponent({
   name: 'BurgerMenu',
   components: {
     OpenMenu,
     CloseMenu,
-  },
-  props: {
-    navItems: {
-      type: Array as PropType<NavItem[]>,
-      required: true,
-    },
+    NavItems,
   },
   data() {
     return {
@@ -40,13 +31,17 @@ export default defineComponent({
   </button>
 
   <div
+    id="burger"
     class="block sm:hidden absolute w-full top-[100px] left-0 bg-dark-blue border-t border-accent-blue drop-shadow-xl"
     v-show="isOpen"
   >
-    <a class="block py-6 px-12" v-for="item in navItems" :key="item.name" :href="item.href">{{
-      item.name
-    }}</a>
+    <NavItems />
   </div>
 </template>
 
-<style></style>
+<style>
+#burger a {
+  display: block;
+  padding: 1.5rem 3rem;
+}
+</style>

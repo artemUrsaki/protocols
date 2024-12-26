@@ -34,18 +34,28 @@
     line-height: 1;
   }
 
+  h2 {
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 1;
+  }
+
+  section {
+    padding: 200px 3rem;
+  }
+
   @media (min-width: 640px) {
     h1 {
       font-size: 6rem;
     }
 
+    h2 {
+      font-size: 4rem;
+    }
+
     body {
       font-size: 18px;
     }
-  }
-
-  section {
-    padding: 200px 3rem;
   }
 }
 

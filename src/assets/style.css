@@ -775,6 +775,11 @@ section {
   text-align: center;
 }
 
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 .font-medium {
   font-weight: 500;
 }
@@ -824,6 +829,11 @@ a.router-link-exact-active {
 
   .sm\:hidden {
     display: none;
+  }
+
+  .sm\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 

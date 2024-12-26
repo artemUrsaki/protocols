@@ -11,6 +11,7 @@ export default {
       colors: {
         'accent-blue': '#0077ff',
         'dark-blue': '#000c1a',
+        'lighter-blue': '#003671',
         'accent-purple': '#5e00ff',
       },
     },

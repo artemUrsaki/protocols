@@ -20,13 +20,15 @@ export default defineComponent({
 </script>
 
 <template>
-  <RouterLink class="flex h-[100px] items-center px-4 uppercase" to="/">Home</RouterLink>
+  <header class="fixed z-50 h-[100px] w-full top-0 left-0 flex justify-between px-8 bg-dark-blue">
+    <RouterLink class="flex h-[100px] items-center px-4 uppercase" to="/">Home</RouterLink>
 
-  <ul class="hidden sm:flex">
-    <li v-for="item in navItems" :key="item.name">
-      <a class="flex h-[100px] items-center px-4 uppercase" :href="item.href">{{ item.name }}</a>
-    </li>
-  </ul>
+    <ul class="hidden sm:flex">
+      <li v-for="item in navItems" :key="item.name">
+        <a class="flex h-[100px] items-center px-4 uppercase" :href="item.href">{{ item.name }}</a>
+      </li>
+    </ul>
 
-  <BurgerMenu :navItems="navItems" />
+    <BurgerMenu :navItems="navItems" />
+  </header>
 </template>

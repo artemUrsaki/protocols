@@ -23,7 +23,7 @@
   }
 
   @media (hover: hover) {
-    a:hover {
+    header a:hover {
       color: #0077ff;
     }
   }
@@ -45,7 +45,7 @@
   }
 
   section {
-    padding: 200px 2rem;
+    padding: 200px 3rem;
   }
 }
 

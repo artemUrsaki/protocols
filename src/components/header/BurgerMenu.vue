@@ -28,15 +28,15 @@ export default defineComponent({
 </script>
 
 <template>
-  <button @click="switchNav" class="block sm:hidden">
+  <button @click="switchNav" class="block sm:hidden px-4">
     <FontAwesomeIcon :icon="isOpen ? 'xmark' : 'bars'" />
   </button>
 
   <div
-    class="absolute w-full top-[100px] left-0 bg-dark-blue border-t border-accent-blue drop-shadow-xl"
+    class="block sm:hidden absolute w-full top-[100px] left-0 bg-dark-blue border-t border-accent-blue drop-shadow-xl"
     v-show="isOpen"
   >
-    <a class="block py-6 px-4" v-for="item in navItems" :key="item.name" :href="item.href">{{
+    <a class="block py-6 px-12" v-for="item in navItems" :key="item.name" :href="item.href">{{
       item.name
     }}</a>
   </div>

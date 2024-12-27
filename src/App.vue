@@ -15,7 +15,7 @@ export default defineComponent({
 <template>
   <Navigation />
 
-  <main>
+  <main class="flex-1">
     <RouterView />
   </main>
 

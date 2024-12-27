@@ -28,7 +28,11 @@ export default defineComponent({
 <template>
   <HeroSection />
 
-  <ContentSection :tagNames="httpTags" class="bg-gradient-to-b from-lighter-blue to-dark-blue">
+  <ContentSection
+    id="section"
+    :tagNames="httpTags"
+    class="scroll-m-[100px] bg-gradient-to-b from-lighter-blue to-dark-blue"
+  >
     <template #image>
       <ContentImage imageName="http" />
     </template>

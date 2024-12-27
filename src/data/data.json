@@ -2,15 +2,15 @@
   "nav": [
     {
       "name": "Http",
-      "href": "#"
+      "route": "#"
     },
     {
       "name": "Mqtt",
-      "href": "#"
+      "route": "#"
     },
     {
       "name": "Compare",
-      "href": "#"
+      "route": "compare"
     }
   ],
   "tags": {

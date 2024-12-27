@@ -1,6 +1,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import data from '@/data/data.json'
+import { isTemplateMiddle } from 'typescript'
 
 export default defineComponent({
   name: 'NavItems',
@@ -14,6 +15,6 @@ export default defineComponent({
 
 <template>
   <li class="list-none" v-for="item in navItems" :key="item.name">
-    <a :href="item.href">{{ item.name }}</a>
+    <RouterLink :to="item.route">{{ item.name }}</RouterLink>
   </li>
 </template>

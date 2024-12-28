@@ -1,7 +1,6 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import data from '@/data/data.json'
-import { isTemplateMiddle } from 'typescript'
 
 export default defineComponent({
   name: 'NavItems',

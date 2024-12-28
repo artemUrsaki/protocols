@@ -14,9 +14,11 @@ export default defineComponent({
 
 <template>
   <header class="fixed z-50 h-[100px] w-full top-0 left-0 flex justify-between px-8 bg-dark-blue">
-    <RouterLink class="flex h-[100px] items-center px-4 uppercase" to="/">Home</RouterLink>
+    <RouterLink class="flex h-[100px] items-center px-4 uppercase font-semibold" to="/"
+      >Home</RouterLink
+    >
 
-    <ul class="hidden sm:flex">
+    <ul class="hidden sm:flex font-semibold">
       <NavItems />
     </ul>
 

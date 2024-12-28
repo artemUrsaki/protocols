@@ -10,25 +10,34 @@ export default defineComponent({
     }
   },
   computed: {
-    status() {
-      return this.requestStore.status
+    httpStatus() {
+      return this.requestStore.httpStatus
     },
-    responseTime() {
-      return this.requestStore.responseTime
+    httpResponseTime() {
+      return this.requestStore.httpResponseTime
+    },
+    mqttResponseTime() {
+      return this.requestStore.mqttResponseTime
     },
   },
   methods: {
-    makeRequest() {
+    makeHttpRequest() {
       this.requestStore.httpRequest()
+    },
+    makeMqttRequest() {
+      this.requestStore.mqttRequest()
     },
   },
 })
 </script>
 
 <template>
-  <p>{{ status }}</p>
+  <p>{{ httpStatus }}</p>
   <br />
-  <h1>{{ responseTime }}</h1>
+  <h1>{{ httpResponseTime }}</h1>
   <br />
-  <button @click="makeRequest">Make a request</button>
+  <button @click="makeHttpRequest">Make an HTTP request</button>
+
+  <h1>{{ mqttResponseTime }}</h1>
+  <button @click="makeMqttRequest">Make an MQTT request</button>
 </template>

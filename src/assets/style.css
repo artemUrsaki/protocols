@@ -746,10 +746,6 @@ svg {
   flex: 1 1 0%;
 }
 
-.scroll-m-\[200px\] {
-  scroll-margin: 200px;
-}
-
 .scroll-m-\[100px\] {
   scroll-margin: 100px;
 }

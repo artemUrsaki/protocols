@@ -43,7 +43,7 @@ export default defineComponent({
 
       <a
         href="#"
-        class="w-fit flex items-center group order-5 text-base mt-4 text-accent-blue active:scale-[.99]"
+        class="w-fit flex items-center group order-5 text-base font-semibold mt-4 text-accent-blue active:scale-[.99]"
         >Learn more
         <RightArrow class="fill-accent-blue w-3 inline ml-2 group-hover:ml-2.5 transition-all"
       /></a>

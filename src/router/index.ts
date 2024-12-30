@@ -6,7 +6,14 @@ const router = createRouter({
   routes: [
     {
       path: '/',
+      name: 'home',
       component: HomeView,
+    },
+    {
+      path: '/:slug',
+      name: 'content',
+      component: () => import('@/views/ContentView.vue'),
+      props: true,
     },
     {
       path: '/compare',

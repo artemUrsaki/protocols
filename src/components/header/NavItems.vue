@@ -14,6 +14,6 @@ export default defineComponent({
 
 <template>
   <li class="list-none" v-for="item in navItems" :key="item.name">
-    <RouterLink :to="item.route">{{ item.name }}</RouterLink>
+    <RouterLink :to="{ name: item.route, params: item.params }">{{ item.name }}</RouterLink>
   </li>
 </template>

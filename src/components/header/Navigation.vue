@@ -13,7 +13,9 @@ export default defineComponent({
 </script>
 
 <template>
-  <header class="fixed z-50 h-[100px] w-full top-0 left-0 flex justify-between px-8 bg-dark-blue">
+  <header
+    class="fixed z-50 h-[100px] w-full top-0 left-0 flex justify-between px-8 bg-dark-blue border-b border-accent-blue"
+  >
     <RouterLink class="flex h-[100px] items-center px-4 uppercase font-semibold" to="/"
       >Home</RouterLink
     >

@@ -18,6 +18,14 @@ export default defineComponent({
           name: 'MQTT',
           href: 'https://mqtt.org/',
         },
+        {
+          name: 'EMQX',
+          href: 'https://www.emqx.com/',
+        },
+        {
+          name: 'HiveMQ',
+          href: 'https://www.hivemq.com/',
+        },
       ],
     }
   },
@@ -25,7 +33,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <footer class="px-6 pb-8 pt-16 bg-dark-blue text-sm/6">
+  <footer class="px-6 pb-8 pt-16 bg-dark-blue text-sm/6 border-t border-accent-blue">
     <div class="flex flex-col sm:flex-row sm:justify-between gap-8">
       <div class="lg:max-w-[40%]">
         <h3 class="uppercase font-bold tracking-widest mb-4">
@@ -45,7 +53,7 @@ export default defineComponent({
           </ul>
         </div>
 
-        <div>
+        <div class="sm:pr-4">
           <h3>Sources</h3>
           <ul>
             <li v-for="link in links" :key="link.name">
@@ -61,7 +69,12 @@ export default defineComponent({
 </template>
 
 <style>
-footer a {
+footer a,
+footer a.router-link-exact-active {
   color: rgb(107 114 128 / 1);
+}
+
+footer a:hover {
+  color: #0077ff;
 }
 </style>

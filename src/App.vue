@@ -9,15 +9,20 @@ export default defineComponent({
     Navigation,
     FooterSection,
   },
+  computed: {
+    isHome() {
+      if (this.$route.name == 'home') return 'border-none'
+    },
+  },
 })
 </script>
 
 <template>
-  <Navigation />
+  <Navigation :class="isHome" />
 
   <main class="flex-1">
-    <RouterView />
+    <RouterView :key="$route.fullPath" />
   </main>
 
-  <FooterSection />
+  <FooterSection :class="isHome" />
 </template>

@@ -1,8 +1,12 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
+import CustomButton from '../CustomButton.vue'
 
 export default defineComponent({
   name: 'HeroSection',
+  components: {
+    CustomButton,
+  },
 })
 </script>
 
@@ -19,11 +23,7 @@ export default defineComponent({
         Understanding the difference, advantages and disadvantages of each protocol. Comparison of
         performance, security, and flexibility.
       </p>
-      <a
-        class="text-sm sm:text-base mt-4 py-2.5 px-4 max-w-fit bg-accent-blue rounded-lg font-semibold hover:scale-105 hover:text-white active:bg-lightest-blue"
-        href="#section"
-        >Read more</a
-      >
+      <CustomButton href="#section"> Read more </CustomButton>
     </div>
 
     <img

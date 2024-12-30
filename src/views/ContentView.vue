@@ -31,7 +31,9 @@ export default defineComponent({
 
 <template>
   <section class="py-[100px] md:px-32 border-b border-accent-blue">
-    <h2 class="uppercase text-center pb-8">{{ dataObject.name }}</h2>
+    <h2 class="uppercase text-center pb-8">
+      {{ dataObject.name }}
+    </h2>
     <div v-for="(item, index) in dataObject.content" :key="index">
       <Paragraph class="py-4" :class="isFirst(index)">
         {{ item.text }}

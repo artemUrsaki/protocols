@@ -2,9 +2,13 @@
 import { defineComponent } from 'vue'
 import { useHttpStore } from '@/stores/httpRequest'
 import { useMqttStore } from '@/stores/mqttRequest'
+import RequestTable from '@/components/RequestTable.vue'
 
 export default defineComponent({
   name: 'CompareView',
+  components: {
+    RequestTable,
+  },
   data() {
     return {
       httpStore: useHttpStore(),
@@ -37,11 +41,17 @@ export default defineComponent({
 </script>
 
 <template>
-  <h1>{{ httpResponseTime }}</h1>
-  <br />
-  <button @click="makeHttpRequest">Make an HTTP request</button>
+  <section
+    class="flex flex-col items-center gap-y-16 bg-gradient-to-b from-accent-blue/25 to-accent-purple/25"
+  >
+    <RequestTable inheritAttributes @click="makeHttpRequest">
+      <template #title>Http</template>
+      <template #responseTime>{{ httpResponseTime }}</template>
+    </RequestTable>
 
-  <h2>{{ mqttMessage }}</h2>
-  <h1>{{ mqttResponseTime }}</h1>
-  <button @click="makeMqttRequest">Make an MQTT request</button>
+    <RequestTable @click="makeMqttRequest">
+      <template #title>Mqtt</template>
+      <template #responseTime>{{ mqttResponseTime }}</template>
+    </RequestTable>
+  </section>
 </template>

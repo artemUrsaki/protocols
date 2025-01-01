@@ -1,14 +1,20 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
-import Paragraph from '@/components/Paragraph.vue'
 import data from '@/data/data.json'
+import Paragraph from '@/components/Paragraph.vue'
 import ContentImage from '@/components/ContentImage.vue'
+import RequestInfo from '@/components/protocols/TestInfo.vue'
+import HttpTest from '@/components/protocols/httpTest.vue'
+import MqttTest from '@/components/protocols/MqttTest.vue'
 
 export default defineComponent({
   name: 'ContentView',
   components: {
     Paragraph,
     ContentImage,
+    RequestInfo,
+    HttpTest,
+    MqttTest,
   },
   props: {
     slug: {
@@ -23,7 +29,7 @@ export default defineComponent({
   },
   methods: {
     isFirst(index: number) {
-      if (index === 0) return 'text-xl/9'
+      if (index === 0) return 'text-lg/9 sm:text-xl/9'
     },
   },
 })
@@ -40,5 +46,8 @@ export default defineComponent({
       </Paragraph>
       <ContentImage v-if="item.image" :imageName="item.image" class="my-8 lg:my-16" />
     </div>
+    <h2 class="text-center pt-16 pb-8 uppercase">Test</h2>
+    <HttpTest v-if="dataObject.name == 'http'" />
+    <MqttTest v-else />
   </section>
 </template>

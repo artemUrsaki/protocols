@@ -12,7 +12,7 @@ export default defineComponent({
 
 <template>
   <section
-    class="sm:pt-[100px] relative overflow-hidden bg-gradient-to-b from-dark-blue to-lighter-blue lg:grid grid-cols-2 gap-x-20 gap-y-8 items-center"
+    class="sm:pt-[100px] min-h-hero relative overflow-hidden bg-gradient-to-b from-dark-blue to-lighter-blue lg:grid grid-cols-2 gap-x-20 gap-y-8 items-center"
   >
     <div class="flex flex-col gap-y-8 items-center lg:items-start">
       <h1 class="uppercase text-wrap text-center lg:text-left">

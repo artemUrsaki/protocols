@@ -46,7 +46,7 @@
   }
 
   section {
-    padding: 200px 3rem;
+    padding: 100px 3rem;
   }
 
   svg {
@@ -65,6 +65,10 @@
 
     body {
       font-size: 18px;
+    }
+
+    section {
+      padding: 200px 3rem;
     }
   }
 }

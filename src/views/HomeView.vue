@@ -1,8 +1,8 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import data from '@/data/data.json'
-import HeroSection from '@/components/main/HeroSection.vue'
-import ContentSection from '@/components/main/ContentSection.vue'
+import HeroSection from '@/components/home/HeroSection.vue'
+import ContentSection from '@/components/home/ContentSection.vue'
 import ContentImage from '@/components/ContentImage.vue'
 import Paragraph from '@/components/Paragraph.vue'
 

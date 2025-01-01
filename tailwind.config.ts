@@ -15,6 +15,9 @@ export default {
         'lightest-blue': '#3392FF',
         'accent-purple': '#5e00ff',
       },
+      minHeight: {
+        hero: 'calc(100vh - 200px)',
+      },
     },
   },
   plugins: [],

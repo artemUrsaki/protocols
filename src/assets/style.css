@@ -597,7 +597,7 @@ h2 {
 }
 
 section {
-  padding: 200px 3rem;
+  padding: 100px 3rem;
 }
 
 svg {
@@ -616,6 +616,10 @@ svg {
 
   body {
     font-size: 18px;
+  }
+
+  section {
+    padding: 200px 3rem;
   }
 }
 
@@ -682,6 +686,14 @@ svg {
   margin-bottom: 1rem;
 }
 
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
 .ml-2 {
   margin-left: 0.5rem;
 }
@@ -692,14 +704,6 @@ svg {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.mt-16 {
-  margin-top: 4rem;
-}
-
-.mb-8 {
-  margin-bottom: 2rem;
 }
 
 .block {
@@ -730,6 +734,10 @@ svg {
   max-height: 24rem;
 }
 
+.min-h-hero {
+  min-height: calc(100vh - 200px);
+}
+
 .w-3 {
   width: 0.75rem;
 }
@@ -749,6 +757,10 @@ svg {
 
 .min-w-\[1000px\] {
   min-width: 1000px;
+}
+
+.max-w-\[500px\] {
+  max-width: 500px;
 }
 
 .max-w-fit {
@@ -784,12 +796,12 @@ svg {
   align-items: center;
 }
 
-.justify-between {
-  justify-content: space-between;
+.justify-center {
+  justify-content: center;
 }
 
-.justify-around {
-  justify-content: space-around;
+.justify-between {
+  justify-content: space-between;
 }
 
 .gap-8 {
@@ -818,16 +830,16 @@ svg {
   row-gap: 2rem;
 }
 
-.gap-y-16 {
-  row-gap: 4rem;
-}
-
 .overflow-hidden {
   overflow: hidden;
 }
 
 .text-wrap {
   text-wrap: wrap;
+}
+
+.text-nowrap {
+  text-wrap: nowrap;
 }
 
 .text-pretty {
@@ -844,6 +856,10 @@ svg {
 
 .rounded-xl {
   border-radius: 0.75rem;
+}
+
+.border-2 {
+  border-width: 2px;
 }
 
 .border-b {
@@ -868,11 +884,6 @@ svg {
   border-color: rgb(107 114 128 / var(--tw-border-opacity, 1));
 }
 
-.border-gray-400 {
-  --tw-border-opacity: 1;
-  border-color: rgb(156 163 175 / var(--tw-border-opacity, 1));
-}
-
 .bg-accent-blue {
   --tw-bg-opacity: 1;
   background-color: rgb(0 119 255 / var(--tw-bg-opacity, 1));
@@ -888,20 +899,18 @@ svg {
   background-color: rgb(0 12 26 / var(--tw-bg-opacity, 1));
 }
 
-.bg-transparent\/50 {
-  background-color: rgb(0 0 0 / 0.5);
-}
-
-.bg-transparent\/100 {
-  background-color: rgb(0 0 0 / 1);
-}
-
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
 
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.from-accent-blue\/25 {
+  --tw-gradient-from: rgb(0 119 255 / 0.25) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(0 119 255 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
 .from-dark-blue {
@@ -916,22 +925,8 @@ svg {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
-.from-accent-blue {
-  --tw-gradient-from: #0077ff var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(0 119 255 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.from-accent-blue\/50 {
-  --tw-gradient-from: rgb(0 119 255 / 0.5) var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(0 119 255 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.from-accent-blue\/25 {
-  --tw-gradient-from: rgb(0 119 255 / 0.25) var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(0 119 255 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+.to-accent-purple\/25 {
+  --tw-gradient-to: rgb(94 0 255 / 0.25) var(--tw-gradient-to-position);
 }
 
 .to-dark-blue {
@@ -942,20 +937,12 @@ svg {
   --tw-gradient-to: #003671 var(--tw-gradient-to-position);
 }
 
-.to-accent-purple {
-  --tw-gradient-to: #5e00ff var(--tw-gradient-to-position);
-}
-
-.to-accent-purple\/50 {
-  --tw-gradient-to: rgb(94 0 255 / 0.5) var(--tw-gradient-to-position);
-}
-
-.to-accent-purple\/25 {
-  --tw-gradient-to: rgb(94 0 255 / 0.25) var(--tw-gradient-to-position);
-}
-
 .fill-accent-blue {
   fill: #0077ff;
+}
+
+.p-16 {
+  padding: 4rem;
 }
 
 .px-2\.5 {
@@ -998,11 +985,6 @@ svg {
   padding-bottom: 100px;
 }
 
-.py-8 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
 .pb-8 {
   padding-bottom: 2rem;
 }
@@ -1011,25 +993,31 @@ svg {
   padding-top: 4rem;
 }
 
-.pt-4 {
-  padding-top: 1rem;
-}
-
-.pt-8 {
-  padding-top: 2rem;
-}
-
 .pt-2 {
   padding-top: 0.5rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
 }
 
 .text-center {
   text-align: center;
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.text-lg\/9 {
+  font-size: 1.125rem;
+  line-height: 2.25rem;
 }
 
 .text-sm {
@@ -1042,29 +1030,19 @@ svg {
   line-height: 1.5rem;
 }
 
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 .text-xl\/8 {
   font-size: 1.25rem;
   line-height: 2rem;
 }
 
-.text-xl\/9 {
-  font-size: 1.25rem;
-  line-height: 2.25rem;
-}
-
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
 }
 
 .font-bold {
@@ -1075,12 +1053,12 @@ svg {
   font-weight: 500;
 }
 
-.font-semibold {
-  font-weight: 600;
-}
-
 .font-normal {
   font-weight: 400;
+}
+
+.font-semibold {
+  font-weight: 600;
 }
 
 .uppercase {
@@ -1108,6 +1086,11 @@ svg {
 .text-gray-400 {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity, 1));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
 .shadow-2xl {
@@ -1170,12 +1153,20 @@ a.router-link-exact-active {
     margin-bottom: 2rem;
   }
 
+  .sm\:inline {
+    display: inline;
+  }
+
   .sm\:flex {
     display: flex;
   }
 
   .sm\:hidden {
     display: none;
+  }
+
+  .sm\:w-full {
+    width: 100%;
   }
 
   .sm\:flex-row {
@@ -1194,14 +1185,38 @@ a.router-link-exact-active {
     padding-top: 100px;
   }
 
+  .sm\:text-left {
+    text-align: left;
+  }
+
+  .sm\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .sm\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
   .sm\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 
+  .sm\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
   .sm\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
+  }
+
+  .sm\:text-xl\/9 {
+    font-size: 1.25rem;
+    line-height: 2.25rem;
   }
 }
 

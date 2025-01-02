@@ -38,4 +38,18 @@ export const useDataStore = defineStore({
       localStorage.setItem('httpData', JSON.stringify(this.httpData))
     },
   },
+  getters: {
+    averageHttpLatency: (state) => {
+      const sum = state.httpData.reduce((res: number, item: any) => (res += item.latency), 0)
+      return Number((sum / state.httpData.length).toFixed(2)) || 0
+    },
+    averageMqttTotalLatency: (state) => {
+      const sum = state.mqttData.reduce((res: number, item: any) => (res += item.totalLatency), 0)
+      return Number((sum / state.mqttData.length).toFixed(2)) || 0
+    },
+    averageMqttMessageLatency: (state) => {
+      const sum = state.mqttData.reduce((res: number, item: any) => (res += item.messageLatency), 0)
+      return Number((sum / state.mqttData.length).toFixed(2)) || 0
+    },
+  },
 })

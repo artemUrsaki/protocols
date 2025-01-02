@@ -1,52 +1,25 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { useDataStore } from '@/stores/data'
+import DataTable from '@/components/protocols/DataTable.vue'
 
 export default defineComponent({
   name: 'Compare',
+  components: {
+    DataTable,
+  },
   data() {
     return {
-      dataStore: useDataStore(),
+      protocols: ['http', 'mqtt'],
     }
-  },
-  computed: {
-    mqttData() {
-      return this.dataStore.mqttData
-    },
-    httpData() {
-      return this.dataStore.httpData
-    },
-  },
-  methods: {
-    deleteMqttItem(index: number) {
-      this.dataStore.deleteMqttItem(index)
-    },
-    deleteHttpItem(index: number) {
-      this.dataStore.deleteHttpItem(index)
-    },
-    clearMqtt() {
-      this.dataStore.clearMqttData()
-    },
-    clearHttp() {
-      this.dataStore.clearHttpData()
-    },
   },
 })
 </script>
 
 <template>
-  <h1>Mqtt</h1>
-  <div v-for="(item, index) in mqttData" :key="item.id">
-    <p>{{ item.totalLatency }}</p>
-    <p>{{ item.messageLatency }}</p>
-    <button @click="deleteMqttItem(index)">remove</button>
-  </div>
-  <button @click="clearMqtt">Clear</button>
-  <h1>Http</h1>
-  <div v-for="(item, index) in httpData" :key="item.id">
-    <p>{{ item.latency }}</p>
-    <p>{{ item.status }}</p>
-    <button @click="deleteHttpItem(index)">remove</button>
-  </div>
-  <button @click="clearHttp">Clear</button>
+  <section class="py-[100px] flex flex-col gap-32 lg:flex-row lg:gap-16">
+    <div v-for="protocol in protocols" :key="protocol" class="w-full">
+      <h2 class="uppercase text-center mb-8">{{ protocol }}</h2>
+      <DataTable :protocol="protocol" />
+    </div>
+  </section>
 </template>

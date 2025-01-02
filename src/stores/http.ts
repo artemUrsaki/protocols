@@ -1,11 +1,13 @@
 import { defineStore } from 'pinia'
 import axios from 'axios'
+import { useDataStore } from './data'
 
 export const useHttpStore = defineStore({
   id: 'http',
   state: () => ({
-    latency: Number(localStorage.getItem('httpLatency')) || 0,
-    status: Number(localStorage.getItem('httpContent')) || 0,
+    dataStore: useDataStore(),
+    latency: 0,
+    status: 0,
   }),
   actions: {
     async request() {
@@ -16,12 +18,10 @@ export const useHttpStore = defineStore({
 
         this.latency = Number((endTime - startTime).toFixed(2))
         this.status = response.status
-      } catch {
-        console.log('Error')
+        this.dataStore.addHttpItem(this.latency, this.status)
+      } catch (err) {
+        console.log(err)
       }
-
-      localStorage.setItem('httpLatency', String(this.latency))
-      localStorage.setItem('httpContent', String(this.status))
     },
   },
 })

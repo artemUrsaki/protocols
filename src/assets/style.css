@@ -706,6 +706,26 @@ svg {
   margin-top: 2rem;
 }
 
+.-mb-2 {
+  margin-bottom: -0.5rem;
+}
+
+.-mb-1 {
+  margin-bottom: -0.25rem;
+}
+
+.-mb-\[0\.5px\] {
+  margin-bottom: -0.5px;
+}
+
+.-mb-px {
+  margin-bottom: -1px;
+}
+
+.-mb-0\.5 {
+  margin-bottom: -0.125rem;
+}
+
 .block {
   display: block;
 }
@@ -716,6 +736,10 @@ svg {
 
 .flex {
   display: flex;
+}
+
+.table {
+  display: table;
 }
 
 .contents {
@@ -768,6 +792,22 @@ svg {
   max-width: fit-content;
 }
 
+.max-w-\[300px\] {
+  max-width: 300px;
+}
+
+.max-w-\[30\%\] {
+  max-width: 30%;
+}
+
+.max-w-2xl {
+  max-width: 42rem;
+}
+
+.max-w-xl {
+  max-width: 36rem;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -806,6 +846,26 @@ svg {
 
 .gap-8 {
   gap: 2rem;
+}
+
+.gap-16 {
+  gap: 4rem;
+}
+
+.gap-20 {
+  gap: 5rem;
+}
+
+.gap-24 {
+  gap: 6rem;
+}
+
+.gap-32 {
+  gap: 8rem;
+}
+
+.gap-4 {
+  gap: 1rem;
 }
 
 .gap-x-20 {
@@ -862,12 +922,26 @@ svg {
   border-width: 2px;
 }
 
+.border-y-2 {
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+}
+
+.border-y {
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+}
+
 .border-b {
   border-bottom-width: 1px;
 }
 
 .border-t {
   border-top-width: 1px;
+}
+
+.border-b-2 {
+  border-bottom-width: 2px;
 }
 
 .border-none {
@@ -882,6 +956,16 @@ svg {
 .border-gray-500 {
   --tw-border-opacity: 1;
   border-color: rgb(107 114 128 / var(--tw-border-opacity, 1));
+}
+
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
+}
+
+.border-gray-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(156 163 175 / var(--tw-border-opacity, 1));
 }
 
 .bg-accent-blue {
@@ -939,6 +1023,10 @@ svg {
 
 .fill-accent-blue {
   fill: #0077ff;
+}
+
+.fill-accent-purple {
+  fill: #5e00ff;
 }
 
 .p-16 {
@@ -1001,6 +1089,18 @@ svg {
   padding-top: 1rem;
 }
 
+.pl-2 {
+  padding-left: 0.5rem;
+}
+
+.pl-3 {
+  padding-left: 0.75rem;
+}
+
+.text-left {
+  text-align: left;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1043,6 +1143,16 @@ svg {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-lg\/10 {
+  font-size: 1.125rem;
+  line-height: 2.5rem;
 }
 
 .font-bold {
@@ -1124,6 +1234,12 @@ a.router-link-exact-active {
 .hover\:scale-105:hover {
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.hover\:scale-110:hover {
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1218,9 +1334,18 @@ a.router-link-exact-active {
     font-size: 1.25rem;
     line-height: 2.25rem;
   }
+
+  .sm\:text-lg\/10 {
+    font-size: 1.125rem;
+    line-height: 2.5rem;
+  }
 }
 
 @media (min-width: 768px) {
+  .md\:flex-row {
+    flex-direction: row;
+  }
+
   .md\:px-32 {
     padding-left: 8rem;
     padding-right: 8rem;
@@ -1278,11 +1403,24 @@ a.router-link-exact-active {
     gap: 4rem;
   }
 
+  .lg\:gap-0 {
+    gap: 0px;
+  }
+
+  .lg\:gap-8 {
+    gap: 2rem;
+  }
+
   .lg\:pb-4 {
     padding-bottom: 1rem;
   }
 
   .lg\:text-left {
     text-align: left;
+  }
+
+  .lg\:text-lg\/10 {
+    font-size: 1.125rem;
+    line-height: 2.5rem;
   }
 }

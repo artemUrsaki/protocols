@@ -1,7 +1,6 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { useMqttStore } from '@/stores/mqtt'
-import { useDataStore } from '@/stores/data'
 import TestInfo from '@/components/protocols/TestInfo.vue'
 
 export default defineComponent({
@@ -12,7 +11,6 @@ export default defineComponent({
   data() {
     return {
       mqttStore: useMqttStore(),
-      dataStore: useDataStore(),
     }
   },
   computed: {
@@ -26,7 +24,6 @@ export default defineComponent({
   methods: {
     subscribe() {
       this.mqttStore.subscribe()
-      this.dataStore.addMqttItem(this.totalLatency, this.messageLatency)
     },
   },
 })

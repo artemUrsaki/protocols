@@ -12,7 +12,6 @@ export default defineComponent({
   data() {
     return {
       httpStore: useHttpStore(),
-      dataStore: useDataStore(),
     }
   },
   computed: {
@@ -26,7 +25,6 @@ export default defineComponent({
   methods: {
     request() {
       this.httpStore.request()
-      this.dataStore.addHttpItem(this.latency, this.status)
     },
   },
 })

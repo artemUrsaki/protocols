@@ -4,7 +4,7 @@ import data from '@/data/data.json'
 import Paragraph from '@/components/Paragraph.vue'
 import ContentImage from '@/components/ContentImage.vue'
 import RequestInfo from '@/components/protocols/TestInfo.vue'
-import HttpTest from '@/components/protocols/httpTest.vue'
+import HttpTest from '@/components/protocols/HttpTest.vue'
 import MqttTest from '@/components/protocols/MqttTest.vue'
 
 export default defineComponent({

@@ -21,11 +21,24 @@ const router = createRouter({
       name: 'content',
       component: () => import('@/views/ContentView.vue'),
       props: true,
+      beforeEnter: (to, from, next) => {
+        const validSlugs = ['http', 'mqtt']
+        if (validSlugs.includes(to.params.slug as string)) {
+          next()
+        } else {
+          next({ name: 'NotFound' })
+        }
+      },
     },
     {
       path: '/compare',
       name: 'compare',
       component: () => import('@/views/CompareView.vue'),
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'NotFound',
+      component: () => import('@/views/NotFound.vue'),
     },
   ],
 })

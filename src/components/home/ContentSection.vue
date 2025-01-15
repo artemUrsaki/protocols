@@ -18,6 +18,10 @@ export default defineComponent({
       type: Array as PropType<string[]>,
       default: [],
     },
+    pageRoute: {
+      type: Object,
+      required: true,
+    },
   },
 })
 </script>
@@ -41,12 +45,12 @@ export default defineComponent({
         <TagComponent v-for="tag in tagNames" :key="tag" :tagName="tag" />
       </div>
 
-      <a
-        href="#"
+      <RouterLink
+        :to="{ name: pageRoute.route, params: pageRoute.params }"
         class="w-fit flex items-center group order-5 text-base font-semibold mt-4 text-accent-blue active:scale-[.99]"
         >Learn more
         <RightArrow class="fill-accent-blue w-3 inline ml-2 group-hover:ml-2.5 transition-all"
-      /></a>
+      /></RouterLink>
     </div>
   </section>
 </template>

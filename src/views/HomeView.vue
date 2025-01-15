@@ -21,6 +21,12 @@ export default defineComponent({
     mqttTags() {
       return data.tags.mqtt
     },
+    httpRoute() {
+      return data.nav[0]
+    },
+    mqttRoute() {
+      return data.nav[1]
+    },
   },
 })
 </script>
@@ -31,6 +37,7 @@ export default defineComponent({
   <ContentSection
     id="section"
     :tagNames="httpTags"
+    :pageRoute="httpRoute"
     class="scroll-m-[100px] bg-gradient-to-b from-lighter-blue to-dark-blue"
   >
     <template #image>
@@ -60,6 +67,7 @@ export default defineComponent({
   <ContentSection
     :tagNames="mqttTags"
     :imageOnRight="true"
+    :pageRoute="mqttRoute"
     class="bg-gradient-to-b from-dark-blue to-lighter-blue"
   >
     <template #image>
